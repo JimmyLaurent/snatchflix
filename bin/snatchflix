@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+const SnatchFlixCli = require('../lib/snatchflix-cli');
+
+const snatchFlixCli = new SnatchFlixCli();
+snatchFlixCli.start();

@@ -1,18 +1,18 @@
-# Torrentflix [![Travis](https://api.travis-ci.org/ItzBlitz98/torrentflix.svg?branch=master)](https://travis-ci.org/ItzBlitz98/torrentflix) [![Dependency Status](https://www.versioneye.com/nodejs/torrentflix/8.6.2/badge?style=flat)](https://www.versioneye.com/nodejs/torrentflix/8.6.2)
+# snatchflix
+
+Snatchflix is a fork of torrentflix (https://github.com/ItzBlitz98/torrentflix).
 
 A cli tool for searching torrent sites and streaming using peerflix.
 
-It currently supports kickasstorrents, 1337x, seedpeer, Rarbg, The Pirate Bay, YTS, Extratorrent, Limetorrents, nyaa.se, tokyotosho, Cpasbien & eztv.
+It currently supports IpTorrents, TorrentLeech, Torrent9, T411, Freshon.tv, Torrentz2 and 1337x.
 
-Want more ? Create an issue with a request, Alternatively you can contribute your own scrapers.
 
-Pull requests are welcome.
+## Features
 
-## Key features
-
-*  Subtitles fetched automatically.
-*  History of streamed torrents.
 *  Stream or download torrents.
+*  Subtitles fetched automatically (does not work properly with vlc).
+*  History of streamed torrents (work in progress).
+
 
 ## Install (automatic)
 Install peerflix if you haven't already:
@@ -21,10 +21,10 @@ Install peerflix if you haven't already:
 npm install -g peerflix
 ```
 
-Then install torrentflix:
+Then install snatchflix:
 
 ```
-npm install -g torrentflix
+npm install -g snatchflix
 ```
 
 ## Install (manual)
@@ -37,7 +37,7 @@ npm install -g peerflix
 Clone the repository:
 
 ```
-git clone git@github.com:ItzBlitz98/torrentflix.git
+git clone https://github.com/JimmyLaurent/snatchflix.git
 ```
 
 Install dependencies:
@@ -46,44 +46,68 @@ Install dependencies:
 npm install
 ```
 
-You can now update by doing a git pull:
-
-```
-git pull
-```
-
 Now you can run the executable inside the bin folder.
 
-## Preview
-A short video preview: http://webm.host/365df/vid.webm
 
-![peerflix](https://i.imgur.com/rre0MtK.png)
+## Screenshots
+
+
 
 ## Usage
 To run the app run:
 ```
-$ torrentflix
+$ snatchflix
 ```
 
 ## Cli arguments
 
-Torrentflix has some handy cli arguements you can see them using the help flag.
+snatchflix has some handy cli arguements you can see them using the help flag.
 ```
-$ torrentflix --help
+$ snatchflix --help
 ```
 
-## History
-Torrentflix can save a history of watched torrents if enabled.
+## Edit settings
 
-Clearing the history can be done with the --clear flag ex:
 ```
-$ torrentflix --clear
+snatchflix --config=nano
 ```
+
+Default settings:
+
+```
+{
+    torrentProviders: {
+        torrent9: [],
+        '1337x': [],
+        torrentz2 : []
+    },
+    options: {
+        peerflixPlayer: '--vlc',
+        peerflixPlayerArgs: '',
+        peerflixPort: '--port=8888',
+        peerflixPath: '',
+        peerflixCommand: 'peerflix',
+        useSubtitle: false,
+        subtitleLanguage: 'eng',
+        history: false,
+        dateAdded: false,
+    }
+}
+``` 
+Torrent provider list: iptorrents, torrentleech, torrent9, t411, freshon.tv, torrentz2 and 1337x
+
+You can enable privates trackers by filling your authentification informations like this:
+ - Freshontv with credentials: "freshontv: ['username', 'password']"
+ - T411 with token "t411: ['token']"
+ - IpTorrents with cookies : "IpTorrents:[['uid=XXX;', 'pass=XXXX;']]"
+
+ To see all availables trackers and their authentifications methods, check this page => (https://github.com/JimmyLaurent/torrent-search-api)
+
 
 ## Subtitles
-By default subtitles are disabled but you can enable them by running `torrentflix --config=nano` and setting *use_subtitle* to true. You can also change *subtitle_language* to one of [this list](https://github.com/divhide/node-subtitler/blob/master/langs.dump.txt), just be sure to use the three letter code.
+By default subtitles are disabled but you can enable them by running `snatchflix --config=nano` and setting *useSubtitle* to true. You can also change *subtitleLanguage* to one of [this list](https://github.com/divhide/node-subtitler/blob/master/langs.dump.txt), just be sure to use the three letter code.
 
 
 ## License
 
-MIT
+MIT © 2017 [Jimmy Laurent](https://github.com/JimmyLaurent)
