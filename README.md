@@ -51,7 +51,7 @@ Now you can run the executable inside the bin folder.
 
 ## Screenshots
 
-
+<img width="450" alt="screenshot" src="https://cloud.githubusercontent.com/assets/25406553/22629875/255ab58e-ebbd-11e6-885c-2b6ab923bd94.png">
 
 ## Usage
 To run the app run:
