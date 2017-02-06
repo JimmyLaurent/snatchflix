@@ -1,7 +1,7 @@
 {
   "name": "snatchflix",
   "description": "CLI to search torrent sites and stream with peerflix (supports IpTorrents, TorrentLeech, Torrent9, T411, Freshon.tv, Torrentz2 and 1337x).",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/JimmyLaurent/snatchflix",
   "author": {
     "name": "Jimmy Laurent"
@@ -38,7 +38,8 @@
     "spawn-cmd": "^0.0.2",
     "subtitler": "^2.6.0",
     "tmp": "0.0.31",
-    "torrent-search-api": "^1.0.4"
+    "torrent-search-api": "^1.0.4",
+    "windows-no-runnable": "0.0.6"
   },
   "devDependencies": {},
   "keywords": [
@@ -50,6 +51,7 @@
     "1337x",
     "t411",
     "torrent9",
-    "torrentflix"
+    "torrentflix",
+    "peerflix-server"
   ]
 }

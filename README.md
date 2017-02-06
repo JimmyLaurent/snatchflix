@@ -9,7 +9,7 @@ It currently supports IpTorrents, TorrentLeech, Torrent9, T411, Freshon.tv, Torr
 
 ## Features
 
-*  Stream or download torrents.
+*  Stream or download torrents with peerflix (p2p) or peeflix-server (http).
 *  Subtitles fetched automatically (does not work properly with vlc).
 *  History of streamed torrents (work in progress).
 
@@ -66,6 +66,14 @@ snatchflix has some handy cli arguements you can see them using the help flag.
 $ snatchflix --help
 ```
 
+## Peerflix server
+
+Use a peerflix server and stream over http
+
+```
+snatchflix -w http://my-peerflix-server
+```
+
 ## Edit settings
 
 ```
@@ -94,14 +102,14 @@ Default settings:
     }
 }
 ``` 
-Torrent provider list: iptorrents, torrentleech, torrent9, t411, freshon.tv, torrentz2 and 1337x
+Torrent provider list: Iptorrents, Torrentleech, Torrent9, T411, Freshon.tv, Torrentz2 and 1337x
 
 You can enable privates trackers by filling your authentification informations like this:
  - Freshontv with credentials: "freshontv: ['username', 'password']"
  - T411 with token "t411: ['token']"
  - IpTorrents with cookies : "IpTorrents:[['uid=XXX;', 'pass=XXXX;']]"
 
- To see all availables trackers and their authentifications methods, check this page => (https://github.com/JimmyLaurent/torrent-search-api)
+ To see all availables trackers and their authentifications methods, check this page: (https://github.com/JimmyLaurent/torrent-search-api)
 
 
 ## Subtitles
